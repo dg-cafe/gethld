@@ -866,7 +866,12 @@ def main():
                     pass
                 logger.info(f"✅ {name} stopped")
 
-    sys.exit(130 if 'KeyboardInterrupt' in str(sys.exc_info()[0]) else 1)
+    if 'KeyboardInterrupt' in str(sys.exc_info()[0]) or 'EOFError' in str(sys.exc_info()[0]):
+        sys.exit(130)
+    else:
+        sys.exit(0)   # normal success
+        
+    # sys.exit(130 if 'KeyboardInterrupt' in str(sys.exc_info()[0]) else 1)
 
 if __name__ == "__main__":
     mp.freeze_support()
