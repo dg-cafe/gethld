@@ -104,11 +104,11 @@ You’re done! Open the log file with `tail -f qualys_detections_*/qualys_downlo
 ## Full Installation
 
 ```bash
-git clone <your-repo>   # or just copy gethld.py
-cd <project-folder>
+# copy gethld.py from github directly or optionally git clone <your-repo>; cd <project-folder>
 python3 -m venv qualys_env
 source qualys_env/bin/activate   # or Windows equivalent
 pip install requests psutil
+# Go to next step for execution.
 ```
 
 Place `gethld.py` in your working directory.
